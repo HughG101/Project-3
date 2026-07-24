@@ -1,18 +1,18 @@
 /* ---------- Base styles ---------- */
 :root {
-    --page-background: #eef4fb;
-    --surface: #ffffff;
-    --surface-dark: #17324d;
-    --primary: #245f9e;
-    --primary-dark: #174775;
-    --accent: #f0a43a;
-    --success: #2f7d4c;
-    --danger: #a94442;
-    --text: #1d2935;
-    --muted: #5e6b78;
-    --border: #c8d4df;
-    --focus: #ffbf47;
-    --shadow: 0 10px 25px rgba(28, 54, 80, 0.14);
+    --page-background: #e8e3d8;
+    --surface: #f8f4e8;
+    --surface-dark: #31382b;
+    --primary: #596447;
+    --primary-dark: #343d2c;
+    --accent: #b78b3e;
+    --success: #4f6f45;
+    --danger: #8a3f35;
+    --text: #262821;
+    --muted: #666458;
+    --border: #aaa58f;
+    --focus: #e5b94f;
+    --shadow: 0 10px 25px rgba(40, 42, 32, 0.18);
 }
 
 * {
