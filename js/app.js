@@ -64,29 +64,36 @@ const flashcards = [
 
 // Each pair has the same pairId so the game can test for matches.
 const memoryPairs = [
-    { pairId: "html", 
-        front: "HTML", 
-        back: "Structures page content" },
-
-    { pairId: "css", 
-        front: "CSS", 
-        back: "Controls page appearance" },
-
-    { pairId: "javascript", 
-        front: "JavaScript", 
-        back: "Adds page interactivity" },
-
-    { pairId: "dom", 
-        front: "DOM", 
-        back: "Represents the page as objects" },
-
-    { pairId: "flexbox", 
-        front: "Flexbox", 
-        back: "One-dimensional layout" },
-        
-    { pairId: "grid", 
-        front: "CSS Grid", 
-        back: "Two-dimensional layout" }
+    {
+        pairId: "dday",
+        front: "D-Day",
+        back: "The Allied invasion of Normandy on June 6, 1944"
+    },
+    {
+        pairId: "pearl-harbor",
+        front: "Pearl Harbor",
+        back: "The surprise attack on the U.S. naval base in Hawaii on December 7, 1941"
+    },
+    {
+        pairId: "midway",
+        front: "Battle of Midway",
+        back: "A major American naval victory against Japan in June 1942"
+    },
+    {
+        pairId: "stalingrad",
+        front: "Battle of Stalingrad",
+        back: "A major battle on the Eastern Front of World War Two"
+    },
+    {
+        pairId: "manhattan-project",
+        front: "Manhattan Project",
+        back: "The secret U.S. government program to develop the atomic bomb during World War Two"
+    },
+    {
+        pairId: "ve-day",
+        front: "V-E Day",
+        back: "Victory in Europe Day"
+    }
 ];
 
 // ---------- DOM selections ----------
