@@ -1,35 +1,92 @@
 // Flashcard data is stored directly in this JavaScript file.
 const flashcards = [
-    { front: "HTML", back: "HyperText Markup Language" },
-    { front: "CSS", back: "Cascading Style Sheets" },
-    { front: "JavaScript", back: "A programming language used to add interactivity to web pages" },
-    { front: "DOM", back: "Document Object Model" },
-    { front: "Element", back: "A complete HTML item, such as a paragraph or heading" },
-    { front: "Attribute", back: "Extra information placed inside an HTML opening tag" },
-    { front: "Selector", back: "A CSS pattern used to choose which elements will be styled" },
-    { front: "Property", back: "The CSS feature being changed, such as color or margin" },
-    { front: "Function", back: "A reusable block of JavaScript code" },
-    { front: "Array", back: "A list-like structure that stores multiple values" },
-    { front: "Object", back: "A collection of related properties and values" },
-    { front: "Variable", back: "A named container used to store a value" },
-    { front: "Conditional", back: "Code that makes a decision using conditions" },
-    { front: "Loop", back: "Code that repeats while a condition is true or for each item" },
-    { front: "Event", back: "An action such as a click, key press, or form submission" },
-    { front: "Event Listener", back: "Code that waits for an event and runs a function" },
-    { front: "Flexbox", back: "A one-dimensional CSS layout system" },
-    { front: "Grid", back: "A two-dimensional CSS layout system using rows and columns" },
-    { front: "Responsive Design", back: "Design that adapts to different screen sizes" },
-    { front: "Semantic HTML", back: "HTML elements that describe the meaning of their content" }
+    { front: "Axis Powers", 
+        back: "The alliance of Germany, Italy, and Japan During world war two" },
+
+    { front: "Allied Powers", 
+        back: "The alliance of Great Britain, The Soviet Union, The United States during World War Two." },
+
+    { front: "Blitzkrieg", 
+        back: "A fast and forceful military strategy used by Germany during World War Two." },
+
+    { front: "Pearl Harbor", 
+        back: "The surprise attack on the U.S. naval base in Hawaii on December 7, 1941" },
+
+    { front: "D-Day", 
+        back: "The Allied invasion of Normandy on June 6, 1944" },
+
+    { front: "Operation Overlord", 
+        back: "The Allied operation to invade Nazi-occupied Europe" },
+
+    { front: "Battle of Britain", 
+        back: "An air campaign fought by the Royal Air Force against the German Luftwaffe to defend Britain." },
+
+    { front: "Battle of Midway", 
+        back: "A major American naval victory against Japan in June 1942" },
+
+    { front: "Battle of Stalingrad", 
+        back: "A major battle on the Eastern Front of World War Two" },
+
+    { front: "Battle of the Bulge", 
+        back: "A major battle in the Ardennes forest during World War Two" },
+
+    { front: "Holocaust", 
+        back: "The systematic persecution and murder of six million Jewish people and millions of other victims by Nazi Germany." },
+
+    { front: "Nazi Germany", 
+        back: "Germany under the dictatorship of Adolf Hitler from 1933 to 1945." },
+
+    { front: "Fascism", 
+        back: "An authoritarian political system based on dictatorship, extreme nationalism, and suppression of opposition." },
+
+    { front: "Appeasement", 
+        back: "The policy of making concessions to an aggressive power in order to avoid conflict" },
+
+    { front: "Manhatten Project", 
+        back: "The secret U.S. government program to develop the atomic bomb during World War Two" },
+
+    { front: "Rosie the Riveter", 
+        back: "A cultural icon representing women who worked in factories during World War Two" },
+
+    { front: "Home Front", 
+        back: "The civilian population's role in supporting the war effort" },
+
+    { front: "V-E Day", 
+        back: "Victory in Europe Day." },
+
+    { front: "V-J Day", 
+        back: "Victory over Japan Day." },
+
+    { front: "United Nations", 
+        back: "An international organization founded in 1945 to promote peace and cooperation" },
+
 ];
 
 // Each pair has the same pairId so the game can test for matches.
 const memoryPairs = [
-    { pairId: "html", front: "HTML", back: "Structures page content" },
-    { pairId: "css", front: "CSS", back: "Controls page appearance" },
-    { pairId: "javascript", front: "JavaScript", back: "Adds page interactivity" },
-    { pairId: "dom", front: "DOM", back: "Represents the page as objects" },
-    { pairId: "flexbox", front: "Flexbox", back: "One-dimensional layout" },
-    { pairId: "grid", front: "CSS Grid", back: "Two-dimensional layout" }
+    { pairId: "html", 
+        front: "HTML", 
+        back: "Structures page content" },
+
+    { pairId: "css", 
+        front: "CSS", 
+        back: "Controls page appearance" },
+
+    { pairId: "javascript", 
+        front: "JavaScript", 
+        back: "Adds page interactivity" },
+
+    { pairId: "dom", 
+        front: "DOM", 
+        back: "Represents the page as objects" },
+
+    { pairId: "flexbox", 
+        front: "Flexbox", 
+        back: "One-dimensional layout" },
+        
+    { pairId: "grid", 
+        front: "CSS Grid", 
+        back: "Two-dimensional layout" }
 ];
 
 // ---------- DOM selections ----------
