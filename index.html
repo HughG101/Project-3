@@ -73,43 +73,52 @@
         </section>
 
         <section id="memorySection" class="hidden" aria-labelledby="memoryHeading">
-            <div class="section-heading">
-                <div>
-                    <h2 id="memoryHeading">World War Two Memory Match</h2>
-                    <p>Match each World War Two event or person with their description.</p>
-                </div>
+    <div class="section-heading memory-heading">
+        <div>
+            <h2 id="memoryHeading">World War II Memory Match</h2>
+            <p>Match each World War II event or person with its description.</p>
+        </div>
 
-                <div class="stats" aria-label="Memory game progress">
-                    <span id="moveCount">Moves: 0</span>
-                    <span id="matchCount">Matches: 0 / 6</span>
-                </div>
+        <div class="memory-controls-row">
+            <div class="stats" aria-label="Memory game progress">
+                <span id="moveCount">Moves: 0</span>
+                <span id="matchCount">Matches: 0 / 6</span>
             </div>
 
-            <div class="memory-toolbar">
-                <button id="restartMemoryButton" class="primary-button" type="button">
-                    Shuffle and Restart
-                </button>
-            </div>
+            <button
+                id="restartMemoryButton"
+                class="primary-button"
+                type="button"
+            >
+                Shuffle and Restart
+            </button>
+        </div>
+    </div>
 
-            <p id="memoryStatus" class="status-message" aria-live="polite">
-                Select two cards to look for a match.
-            </p>
+    <p
+        id="memoryStatus"
+        class="status-message"
+        aria-live="polite"
+    >
+        Select two cards to look for a match.
+    </p>
 
-            <div
-                id="memoryGrid"
-                class="memory-grid"
-                role="grid"
-                aria-label="Memory matching cards"
-            ></div>
+    <div
+        id="memoryGrid"
+        class="memory-grid"
+        role="grid"
+        aria-label="World War II memory matching cards"
+    ></div>
 
-            <div id="memoryWin" class="completion-panel hidden" role="status">
-                <h3>You matched every pair!</h3>
-                <p id="memoryWinMessage"></p>
-                <button id="playAgainButton" class="primary-button" type="button">
-                    Play Again
-                </button>
-            </div>
-        </section>
+    <div id="memoryWin" class="completion-panel hidden" role="status">
+        <h3>You matched every pair!</h3>
+        <p id="memoryWinMessage"></p>
+
+        <button id="playAgainButton" class="primary-button" type="button">
+            Play Again
+        </button>
+        </div>
+     </section>
     </main>
 
     <footer class="site-footer">

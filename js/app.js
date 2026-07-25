@@ -42,7 +42,7 @@ const flashcards = [
     { front: "Appeasement", 
         back: "The policy of making concessions to an aggressive power in order to avoid conflict" },
 
-    { front: "Manhatten Project", 
+    { front: "Manhattan Project", 
         back: "The secret U.S. government program to develop the atomic bomb during World War Two" },
 
     { front: "Rosie the Riveter", 
@@ -472,4 +472,3 @@ memoryGrid.addEventListener("keydown", (event) => {
 // ---------- Initial setup ----------
 renderFlashcard();
 startMemoryGame();
-
