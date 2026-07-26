@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Basic Page Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A study app with flashcards and a memory matching game.">
+    
     <title>World War Two Study Cards</title>
+
+    <!--External link to CSS file-->
     <link rel="stylesheet" href="styles/main.css">
+    
+    <!--External Link to JavaScript file-->
     <script src="js/app.js" defer></script>
 </head>
 <body>
+    <!--Main Page Header-->
     <header class="site-header">
         <div class="header-content">
             <p class="eyebrow">CIS 1440 Project 3</p>
@@ -17,6 +25,7 @@
         </div>
     </header>
 
+    <!--Buttons used to switch between the two game modes-->
     <nav class="mode-toggle" aria-label="Choose study mode">
         <button id="flashcardsModeButton" class="mode-button active" type="button" aria-pressed="true">
             Flashcards
@@ -26,7 +35,10 @@
         </button>
     </nav>
 
+    <!--Main application content-->
     <main class="app-container">
+
+        <!--Flashcards mode-->
         <section id="flashcardsSection" aria-labelledby="flashcardsHeading">
             <div class="section-heading">
                 <div>
@@ -34,12 +46,14 @@
                     <p>Flip the card, then choose whether you knew the answer.</p>
                 </div>
 
+                <!-- Flashcard porgress counter-->
                 <div class="stats" aria-label="Flashcard progress">
                     <span id="flashcardProgress">1 / 20</span>
                     <span id="gotItCount">Got It: 0</span>
                 </div>
             </div>
 
+            <!--The current Flash Card-->
             <div class="flashcard-area">
                 <button
                     id="flashcard"
@@ -52,6 +66,7 @@
                     <span class="keyboard-hint">Click or press Enter/Space to flip</span>
                 </button>
 
+                <!-- Flashcard Control buttons-->
                 <div class="flashcard-controls" aria-label="Flashcard controls">
                     <button id="flipButton" class="secondary-button" type="button">Flip</button>
                     <button id="againButton" class="answer-button again-button" type="button" disabled>
@@ -62,6 +77,7 @@
                     </button>
                 </div>
 
+                <!-- Flashcard Completion Message-->
                 <div id="flashcardComplete" class="completion-panel hidden" role="status">
                     <h3>Flashcards complete!</h3>
                     <p id="flashcardScoreMessage"></p>
@@ -72,13 +88,17 @@
             </div>
         </section>
 
-        <section id="memorySection" class="hidden" aria-labelledby="memoryHeading">
+        <!-- Memory Match Mode-->
+        <section id="memorySection" 
+        class="hidden" 
+        aria-labelledby="memoryHeading">
     <div class="section-heading memory-heading">
         <div>
             <h2 id="memoryHeading">World War II Memory Match</h2>
             <p>Match each World War II event or person with its description.</p>
         </div>
 
+        <!-- Memory Match controls and counters-->
         <div class="memory-controls-row">
             <div class="stats" aria-label="Memory game progress">
                 <span id="moveCount">Moves: 0</span>
@@ -95,6 +115,7 @@
         </div>
     </div>
 
+    <!-- Announces game messages to screen readers-->
     <p
         id="memoryStatus"
         class="status-message"
@@ -103,6 +124,7 @@
         Select two cards to look for a match.
     </p>
 
+    <!-- Javascript creats the memory cards inside this grid-->
     <div
         id="memoryGrid"
         class="memory-grid"
@@ -110,6 +132,7 @@
         aria-label="World War II memory matching cards"
     ></div>
 
+    <!-- Winning Message-->
     <div id="memoryWin" class="completion-panel hidden" role="status">
         <h3>You matched every pair!</h3>
         <p id="memoryWinMessage"></p>
@@ -121,6 +144,7 @@
      </section>
     </main>
 
+    <!-- Page footer-->
     <footer class="site-footer">
         <p>World War Two Flash Cards Project 3</p>
     </footer>
