@@ -1,4 +1,4 @@
-/* Base styles */
+/* Color and designs for main page */
 :root {
     --page-background: #e8e3d8;
     --surface: #f8f4e8;
@@ -15,10 +15,12 @@
     --shadow: 0 10px 25px rgba(40, 42, 32, 0.18);
 }
 
+/*Makes padding and boarders count as part of the elemetns size */
 * {
     box-sizing: border-box;
 }
 
+/* Basic page style */
 body {
     margin: 0;
     min-height: 100vh;
@@ -28,20 +30,23 @@ body {
     line-height: 1.5;
 }
 
+/* Makes the buttons use the same font as the page */ 
 button {
     font: inherit;
 }
 
+/* shows a visable outline when buttons are selected */ 
 button:focus-visible {
     outline: 4px solid var(--focus);
     outline-offset: 3px;
 }
 
+/* hides sections or message until Javascript displays them */
 .hidden {
     display: none !important;
 }
 
-/* ---------- Header and navigation ---------- */
+/* Styles for main page header */
 .site-header {
     background: var(--surface-dark);
     color: white;
@@ -49,11 +54,13 @@ button:focus-visible {
     text-align: center;
 }
 
+/* Limits width of the header content */
 .header-content {
     width: min(900px, 100%);
     margin: 0 auto;
 }
 
+/* Styles the small projects label above the title */
 .eyebrow {
     margin: 0 0 0.4rem;
     color: #bcd7f1;
@@ -62,17 +69,20 @@ button:focus-visible {
     text-transform: uppercase;
 }
 
+/* Styles the main page heading */
 .site-header h1 {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(2rem, 5vw, 3.4rem);
 }
 
+/* Styles the description under the page heading */
 .site-header p:last-child {
     max-width: 680px;
     margin: 0.8rem auto 0;
 }
 
+/* Holds the flashcards and memory match buttons */
 .mode-toggle {
     display: flex;
     justify-content: center;
@@ -82,6 +92,7 @@ button:focus-visible {
     border-bottom: 1px solid var(--border);
 }
 
+/* Shared styles for the main buttons */
 .mode-button,
 .primary-button,
 .secondary-button,
@@ -94,18 +105,21 @@ button:focus-visible {
     transition: transform 0.15s ease, background-color 0.15s ease;
 }
 
+/* Styles the mode swithcing buttons*/ 
 .mode-button {
     color: var(--primary-dark);
     background: white;
     border: 2px solid var(--primary);
 }
 
+/* Shows which mode is active */
 .mode-button:hover,
 .mode-button.active {
     color: white;
     background: var(--primary);
 }
 
+/* Moves buttons slightly upward when hovered */
 .mode-button:hover,
 .primary-button:hover,
 .secondary-button:hover,
@@ -113,12 +127,13 @@ button:focus-visible {
     transform: translateY(-2px);
 }
 
-/* ---------- Main layout ---------- */
+/* Controls the width and placement of the main app */
 .app-container {
     width: min(1000px, calc(100% - 2rem));
     margin: 2rem auto;
 }
 
+/* styles each main game section */
 section {
     background: var(--surface);
     border-radius: 1rem;
@@ -126,6 +141,7 @@ section {
     box-shadow: var(--shadow);
 }
 
+/* Places section headings and counters beside each other */
 .section-heading {
     display: flex;
     justify-content: space-between;
@@ -134,6 +150,7 @@ section {
     margin-bottom: 1.5rem;
 }
 
+/* Styles section titles */
 .section-heading h2 {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
@@ -141,11 +158,13 @@ section {
     font-size: clamp(1.7rem, 4vw, 2.4rem);
 }
 
+/* Styles the text below each section title */
 .section-heading p {
     margin: 0.35rem 0 0;
     color: var(--muted);
 }
 
+/* Holds the progress counter */
 .stats {
     display: flex;
     flex-wrap: wrap;
@@ -153,6 +172,7 @@ section {
     gap: 0.6rem;
 }
 
+/* Styles each progress counter */ 
 .stats span {
     background: #e7f0f8;
     border: 1px solid #bdd0e1;
@@ -162,13 +182,14 @@ section {
     white-space: nowrap;
 }
 
-/* ---------- Flashcards ---------- */
+/* Centers the flashcards and its controls */
 .flashcard-area {
     display: grid;
     justify-items: center;
     gap: 1.2rem;
 }
 
+/*Styles the main flashcard */
 .flashcard {
     width: min(620px, 100%);
     min-height: 320px;
@@ -188,16 +209,19 @@ section {
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+/* moces the flashcard slightly upward when hovered */ 
 .flashcard:hover {
     transform: translateY(-4px);
 }
 
+/* changes the card appearance when it is flipped */
 .flashcard.flipped {
     color: white;
     background: var(--surface-dark);
     border-color: var(--accent);
 }
 
+/* Styles the front and back label */ 
 .card-side-label {
     padding: 0.35rem 0.7rem;
     border-radius: 999px;
@@ -209,30 +233,36 @@ section {
     text-transform: uppercase;
 }
 
+/* Change the label color when the card is flipped */
 .flashcard.flipped .card-side-label {
     color: var(--surface-dark);
     background: var(--accent);
 }
 
+/* Styles the main flashcard text */ 
 .flashcard-text {
     font-family: Georgia, "Times New Roman", serif;
     font-size: clamp(2rem, 7vw, 3.5rem);
     font-weight: bold;
 }
 
+/* Makes the answer text slightly smaller */
 .flashcard.flipped .flashcard-text {
     font-size: clamp(1.4rem, 5vw, 2.35rem);
 }
 
+/* Styles the keyboard instructions */
 .keyboard-hint {
     color: var(--muted);
     font-size: 0.9rem;
 }
 
+/* Changes the keyboard instructions color on the flipped card */
 .flashcard.flipped .keyboard-hint {
     color: #d7e3ee;
 }
 
+/* Places the flashcard buttons in a row */ 
 .flashcard-controls {
     display: flex;
     flex-wrap: wrap;
@@ -240,54 +270,62 @@ section {
     gap: 0.8rem;
 }
 
+/* styles primary buttons */ 
 .primary-button {
     color: white;
     background: var(--primary);
 }
 
+/* Darkens primary buttons when hovered */ 
 .primary-button:hover {
     background: var(--primary-dark);
 }
 
+/* Styles the flip button */ 
 .secondary-button {
     color: var(--primary-dark);
     background: #dceaf6;
     border: 2px solid var(--primary);
 }
 
+/* Styles the again button */
 .again-button {
     color: white;
     background: var(--danger);
 }
 
+/* Styles got it button */ 
 .got-it-button {
     color: white;
     background: var(--success);
 }
 
+/* Makes dsiabled answer button look unabailable */ 
 .answer-button:disabled {
     opacity: 0.45;
     cursor: not-allowed;
     transform: none;
 }
 
-/* ---------- Memory game ---------- */
-
+/* keeps the memory match title */
 .memory-heading {
     display: block;
     margin-bottom: 1rem;
 }
 
+/* Styles memory match title */ 
 .memory-heading h2 {
     margin: 0;
     line-height: 1.15;
     font-size: clamp(1.8rem, 4vw, 2.6rem);
 }
 
+/* Styles memory match instructions */ 
 .memory-heading p {
     margin: 0.35rem 0 0;
 }
 
+/* Holds the counters and restart button */ 
 .memory-controls-row {
     display: flex;
     align-items: center;
@@ -296,10 +334,12 @@ section {
     margin-top: 1.25rem;
 }
 
+/* Aligns memory counters to the left */ 
 .memory-controls-row .stats {
     justify-content: flex-start;
 }
 
+/* Styles the match and mismatch message */ 
 .status-message {
     min-height: 1.5rem;
     margin: 0 0 1rem;
@@ -308,12 +348,14 @@ section {
     text-align: center;
 }
 
+/* Creates the four column grid for the memory cards */ 
 .memory-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0.75rem;
 }
 
+/* styles each facedown memory card */ 
 .memory-card {
     min-height: 108px;
     display: grid;
@@ -337,6 +379,7 @@ section {
         border-color 0.2s ease;
 }
 
+/* Displays a question mark while a card is facedown*/
 .memory-card::before {
     content: "?";
     font-family: Georgia, "Times New Roman", serif;
@@ -344,38 +387,45 @@ section {
     line-height: 1;
 }
 
+/* Hides memory card text until the card is flipped */
 .memory-card .memory-card-text {
     display: none;
     font-size: clamp(0.75rem, 1.2vw, 0.95rem);
     line-height: 1.25;
 }
 
+/* adds a hover effect to unmatched cards */ 
 .memory-card:hover:not(.matched) {
     transform: translateY(-3px);
     background: var(--primary-dark);
 }
 
+/* Shows focus around memory cards */ 
 .memory-card:focus-visible {
     outline: 4px solid var(--focus);
     outline-offset: 2px;
 }
 
+/* changes the appearance of a flipped card */
 .memory-card.flipped {
     color: var(--text);
     background: #fff4df;
     border-color: var(--accent);
 }
 
+/* Removes the question mark from flipped and matched cards */ 
 .memory-card.flipped::before,
 .memory-card.matched::before {
     display: none;
 }
 
+/* Displays text on flipped and matched cards */ 
 .memory-card.flipped .memory-card-text,
 .memory-card.matched .memory-card-text {
     display: block;
 }
 
+/* Styles cards that have been successfully matched */ 
 .memory-card.matched {
     color: white;
     background: var(--success);
@@ -384,11 +434,12 @@ section {
     opacity: 0.9;
 }
 
+/* Prevents matched cards from moving when hovered */ 
 .memory-card.matched:hover {
     transform: none;
 }
 
-/* ---------- Completion panels and footer ---------- */
+/* Styles the completion and winning message */
 .completion-panel {
     width: min(620px, 100%);
     padding: 1.2rem;
@@ -398,41 +449,49 @@ section {
     text-align: center;
 }
 
+/* Styles the heading inside completion panels */ 
 .completion-panel h3 {
     margin-top: 0;
     color: #225d39;
 }
 
+/*Styles the footer */ 
 .site-footer {
     padding: 1.5rem 1rem;
     color: var(--muted);
     text-align: center;
 }
 
-/* ---------- Responsive styles ---------- */
 @media (max-width: 760px) {
+
+    /* Stacks regular sections heading and counters */
     .section-heading:not(.memory-heading) {
         flex-direction: column;
     }
 
+    /* Stacks the memory counters and restart button */
     .memory-controls-row {
         flex-direction: column;
         align-items: stretch;
     }
 
+    /* Keeps the memory counters aligned left */ 
     .memory-controls-row .stats {
         justify-content: flex-start;
     }
 
+    /* makes restart button fill the available width */
     .memory-controls-row .primary-button {
         width: 100%;
     }
 
+    /* changes the memory grid to three columns */ 
     .memory-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 0.65rem;
     }
 
+    /* Makes memory cards slightly smaller */ 
     .memory-card {
         min-height: 100px;
         padding: 0.55rem;
@@ -440,24 +499,30 @@ section {
 }
 
 @media (max-width: 500px) {
+    
+    /* Makes the memiry match header smaller */ 
     .memory-heading h2 {
         font-size: 1.8rem;
     }
 
+    /* Keeps three smaller columns on mobile */ 
     .memory-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 0.45rem;
     }
 
+    /* Reduces the memory card size */ 
     .memory-card {
         min-height: 92px;
         padding: 0.4rem;
     }
 
+    /*makes the facedown question mark smaller */ 
     .memory-card::before {
         font-size: 1.8rem;
     }
 
+    /* Makes long memory descriptions fit better */ 
     .memory-card .memory-card-text {
         font-size: 0.72rem;
     }
