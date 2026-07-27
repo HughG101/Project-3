@@ -522,7 +522,7 @@ section {
         font-size: 1.8rem;
     }
 
-    /* Makes longer memory descriptions fit better */ 
+    /* Makes long memory descriptions fit better */ 
     .memory-card .memory-card-text {
         font-size: 0.72rem;
     }
